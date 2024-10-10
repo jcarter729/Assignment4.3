@@ -27,12 +27,12 @@ public class Employee
         part.DisplayJobDetails();
     }
 
-    public void displayFullTimeEmployee(PartTimeJob emp)
+    public void displayFullTimeEmployee()
     {
         full.DisplayJobDetails();
     }
 
-    public void displayContractEmployee(PartTimeJob emp)
+    public void displayContractEmployee()
     {
         contract.DisplayJobDetails();
     }

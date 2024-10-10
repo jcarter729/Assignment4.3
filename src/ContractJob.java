@@ -5,7 +5,7 @@ public class ContractJob extends Job
     private int jobSecurity1;
     private double questionRatingAverage;
     private int jobSecurity2;
-    private String jobSecurityFeeling = "Job security is at the current job is: ";
+    private String jobSecurityFeeling = "Job security is at the current job is ";
     private int amountOfWorkers;
 
     public ContractJob(String companyName, String position, int startYear, int endYear, double contractValue, int question1, int question2, int question3, int jobSecurity1, int jobSecurity2, int amountOfWorkers)
@@ -24,7 +24,8 @@ public class ContractJob extends Job
         calculatePayment();
         System.out.print("Contract amount: $");
         System.out.printf("%5.2f%n", contractValue);
-        System.out.println(super.AssessJobSatisfaction() + "\n");
+        System.out.println(super.AssessJobSatisfaction());
+        System.out.println(AssessJobSecurity() + "\n");
     }
 
     //Calculate the payment of the contract
@@ -38,23 +39,23 @@ public class ContractJob extends Job
         questionRatingAverage = (jobSecurity1 + jobSecurity2) / 2;
         if(questionRatingAverage < 2)
         {
-            jobSecurityFeeling += "Horrible";
+            jobSecurityFeeling += "Extremely Low";
         }
         else if(questionRatingAverage < 3)
         {
-            jobSecurityFeeling += "Okay";
+            jobSecurityFeeling += "Low";
         }
         else if(questionRatingAverage < 4)
         {
-            jobSecurityFeeling += "Alright";
+            jobSecurityFeeling += "Medium";
         }
         else if(questionRatingAverage < 5)
         {
-            jobSecurityFeeling += "Good";
+            jobSecurityFeeling += "High";
         }
         else
         {
-            jobSecurityFeeling += "Amazing";
+            jobSecurityFeeling += "Extremely High";
         }
         return jobSecurityFeeling;
     }

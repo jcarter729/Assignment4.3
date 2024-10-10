@@ -22,6 +22,7 @@ public class FullTimeJob extends Job
         getMonthlyPay();
         System.out.print("Average Monthly Check: $");
         System.out.printf("%5.2f%n", pay);
+        System.out.println(evaluateWorkLifeBalance());
         System.out.println(super.AssessJobSatisfaction() + "\n");
     }
 
@@ -36,7 +37,7 @@ public class FullTimeJob extends Job
     //Uses rating system based from 1 (worst) to 5 (best)
     public String evaluateWorkLifeBalance()
     {
-        workLifeBalance = "I have a(n)";
+        workLifeBalance = "I have a(n) ";
         questionRatingAverage = (question4 + question5) / 2;
         if(questionRatingAverage < 2)
         {

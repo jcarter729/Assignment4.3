@@ -34,6 +34,7 @@ public class PartTimeJob extends Job
         System.out.println("Overtime worked: " + overtimeHours);
         System.out.println("Overtime pay: " + overtimePay);
         System.out.println("Amount paid: $" + paycheck());
+        System.out.println(coworkerExperience());
         System.out.println(super.AssessJobSatisfaction() + "\n");
     }
 
@@ -50,7 +51,7 @@ public class PartTimeJob extends Job
     //Uses rating system based from 1 (worst) to 5 (best)
     public String coworkerExperience()
     {
-        coworkerExperience += "I ";
+        coworkerExperience = "I feel ";
         questionRatingAverage = (question4 + question5) / 2;
         if(questionRatingAverage < 2)
         {
